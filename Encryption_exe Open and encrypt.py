@@ -2,6 +2,10 @@
 Simple script to simulate the procedure of a Ransomware attack
 The script encrypts and decrypts target files'
 """""
+"""
+    This script is for educational purposes only, I do not claim responsability for any damages that the script could cause.
+"""
+
 _author_ = "Victor Marquez"
 _version_ =0.4
 
