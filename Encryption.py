@@ -5,7 +5,7 @@ The script encrypts and decrypts target files'
 
 """""
 _author_ = "Victor Marquez"
-_version_ =0.1
+_version_ =0.2
 
 import os
 from pathlib import Path
@@ -18,8 +18,6 @@ def detectFiles(mainPath):
             yield entry
 
 def encryptFile(file, Pkey,Path):
-
-
     #Read file
     dataFIle = file
     with open(dataFIle, 'rb') as f:
@@ -30,7 +28,6 @@ def encryptFile(file, Pkey,Path):
 
 
     #Encrypt the data with the key
-
     cipher = AES.new(Pkey, AES.MODE_EAX)
     chiphertext, tag = cipher.encrypt_and_digest(dataByte)
 
@@ -46,7 +43,7 @@ def encryptFile(file, Pkey,Path):
 
 
 
-
-for file in detectFiles("Folder Path"):
+path = "Path where encrypted files are located"
+for file in detectFiles(path):
     filePath = Path(file)
-    encryptFile(filePath,b'Sixyeen byte key',"Folder Path")
+    encryptFile(filePath,b'Sixyeen byte key',path) #Key, script will not work if keys are not the same
